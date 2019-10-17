@@ -9,15 +9,15 @@ func PrintNbr(n int) {
 	t := 1
 	if n < 0 {
 		t = -1
-		z01.PrintRune('-')
+		z01.PrintRune(45)
 	}
 	if n != 0 {
 		f := (n / 10) * t
 		if f != 0 {
-			PrintNbr(f)
+			z01.PrintRune(f)
 		}
 		k := (n % 10 * t) + '0'
-		z01.PrintRune(rune(k))
+		z01.PrintRune(k)
 	} else {
 		z01.PrintRune('0')
 	}
