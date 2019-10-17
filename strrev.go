@@ -1,7 +1,5 @@
 package piscine
 
-import ()
-
 func StrRev(s string) string {
 
 	var reverse string
