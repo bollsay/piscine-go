@@ -1,10 +1,9 @@
 package piscine
 
 func StrLen(str string) int {
-	c := 0
-	a := []rune(str)
-	for p, _ := range a {
-		c = p + 1
+	nc := 0
+	for range str {
+		nc = nc + 1
 	}
-	return c
+	return nc
 }
