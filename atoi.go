@@ -16,7 +16,7 @@ func Atoi(s string) int {
 			if index > 0 {
 				return 0
 			}
-		} else if j < '0' || j > '9' || sinNumb > 1 {
+		} else if j < '0' || j > '9' || signNumb > 1 {
 			return 0
 		}
 		for i := '1'; i <= j; i++ {
