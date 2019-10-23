@@ -18,19 +18,19 @@ func Index(s string, toFind string) int {
 			for j, qv := range q {
 				if runes[i+j] != qv {
 					found = false
-					if counter-1-i >= qc {
-						if runes[i+j] != qv {
-							found = false
-						}
-					} else {
-						return -1
-					}
 				}
-				if found == true {
-					return i
+				if counter-1-i >= qc {
+					if runes[i+j] != qv {
+						found = false
+					}
+				} else {
+					return -1
 				}
 			}
+			if found == true {
+				return i
+			}
 		}
-		return -1
 	}
+	return -1
 }
