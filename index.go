@@ -2,21 +2,21 @@ package piscine
 
 func Index(s string, toFind string) int {
 	runes := []rune(s)
-	is := []rune(toFind)
+	q := []rune(toFind)
 	counter := 0
-	ip := 0
+	qc := 0
 	for range runes {
 		counter++
 	}
-	for range is {
-		ip++
+	for range q {
+		qc++
 	}
 
 	for i, v := range runes {
-		if v == is[0] {
+		if v == q[0] {
 			found := true
-			for j, qv := range is {
-				if counter-1-i >= ip {
+			for j, qv := range q {
+				if counter-1-i >= qc {
 					if runes[i+j] != qv {
 						found = false
 					}
