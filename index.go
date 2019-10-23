@@ -1,34 +1,39 @@
 package piscine
 
 func Index(s string, toFind string) int {
-	runes := []rune(s)
-	q := []rune(toFind)
-	counter := 0
-	qc := 0
-	for range runes {
-		counter++
+	index := 0
+	k := 0
+	arr2 := []rune(toFind)
+	arr := []rune(s)
+	for _, let := range s {
+		let = let
+		index++
 	}
-	for range q {
-		qc++
+	for _, lett := range toFind {
+		lett = lett
+		k++
 	}
-
-	for i, v := range runes {
-		if v == q[0] {
-			found := true
-			for j, qv := range q {
-				if runes[i+j] != qv {
-					found = false
-				}
-				if counter-1-i >= qc {
-					if runes[i+j] != qv {
-						found = false
+	if k == 0 {
+		return 0
+	}
+	if index == 0 {
+		return -1
+	}
+	a := 1
+	if index >= k {
+		for i := 0; i < index; i++ {
+			if arr[i] == arr2[0] {
+				a = 1
+				for j := 0; j < k; j++ {
+					if arr2[j] == arr[i+j] {
+						continue
 					}
-				} else {
-					return -1
+					a = 0
+					break
 				}
-			}
-			if found == true {
-				return i
+				if a == 1 {
+					return i
+				}
 			}
 		}
 	}
